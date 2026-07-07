@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('./assets/fonts/PPNeueMontreal-Bold.d8c75748.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --bg-color-warm: #EDE8E4;
+  --bg-color-dark: #121212;
+  --text-color-warm: #161312;
+  --text-color-dark: #fcfbf9;
+  --accent-color: #e25a38;
+  
+  --bg-color: var(--bg-color-warm);
+  --text-color: var(--text-color-warm);
+  
+  --font-display: 'Neue Montreal', sans-serif;
+  --font-sans: system-ui, -apple-system, sans-serif;
+  
+  --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark-mode {
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: var(--transition-smooth);
+}
+
+.landing-page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .landing-page-container {
+    padding: 1.5rem;
+  }
+}
